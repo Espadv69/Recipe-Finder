@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDom from 'react-dom/client'
 
+import { App } from './components/App.jsx'
+
 const root = ReactDom.createRoot(document.getElementById('root'))
 
-root.render(<h1>hello, world!</h1>)
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
