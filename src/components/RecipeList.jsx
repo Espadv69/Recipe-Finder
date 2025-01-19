@@ -2,7 +2,7 @@ import RecipeCard from './RecipeCard.jsx'
 
 const RecipeList = ({ recipes }) => {
   if (!recipes || recipes.length === 0) {
-    return <p>No recipes found!</p> // Mensaje para cuando no hay recetas
+    return <p style={{ textAlign: 'center' }}>No recipes found!</p> // Mensaje para cuando no hay recetas
   }
 
   return (
