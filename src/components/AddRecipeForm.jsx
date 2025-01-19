@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const AddRecipeForm = () => {
+const AddRecipeForm = ({ onAddRecipe }) => {
   const [recipe, setRecipe] = useState({
     name: '',
     ingredients: '',
