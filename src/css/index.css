@@ -23,3 +23,16 @@ body {
   color: #ffffff;
   background: #121212;
 }
+
+.h1-title {
+  margin: 1rem auto;
+
+  width: 100%;
+  max-width: 500px;
+
+  text-align: center;
+  font-size: 2.3rem;
+
+  border-bottom: 2px solid #609fff;
+  line-height: 1.4;
+}
