@@ -1,4 +1,4 @@
-export const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe }) => {
   return (
     <div>
       <h3>{recipe.name}</h3>
@@ -7,3 +7,5 @@ export const RecipeCard = ({ recipe }) => {
     </div>
   )
 }
+
+export default RecipeCard
