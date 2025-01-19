@@ -23,7 +23,7 @@ export const App = () => {
 
   return (
     <div>
-      <h1>Recipe Finder</h1>
+      <h1 className="h1-title">Recipe Finder</h1>
       <AddRecipeForm onAddRecipe={handleAddRecipe} />
       <RecipeList recipes={recipes} />
     </div>
