@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export const AddRecipeForm = () => {
+const AddRecipeForm = () => {
   const [recipe, setRecipe] = useState({
     name: '',
     ingredients: '',
@@ -45,3 +45,5 @@ export const AddRecipeForm = () => {
     </form>
   )
 }
+
+export default AddRecipeForm
