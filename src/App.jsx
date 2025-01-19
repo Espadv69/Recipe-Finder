@@ -1,7 +1,12 @@
 import { useState } from 'react'
 
-import { AddRecipeForm } from './components/AddRecipeForm.jsx'
-import { RecipeList } from './components/RecipeList.jsx'
+import {
+  saveToLocalStorage,
+  loadFromLocalStorage,
+} from './utils/localStorage.js'
+
+import AddRecipeForm from './components/AddRecipeForm.jsx'
+import RecipeList from './components/RecipeList.jsx'
 
 export const App = () => {
   const [recipes, setRecipes] = useState([])
