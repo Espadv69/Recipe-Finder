@@ -8,9 +8,11 @@ import {
 import AddRecipeForm from './components/AddRecipeForm.jsx'
 import RecipeList from './components/RecipeList.jsx'
 
+import './css/index.css'
+
 export const App = () => {
   const [recipes, setRecipes] = useState(
-    () => loadFromLocalStorage('recipes') || []
+    () => loadFromLocalStorage('recipes') || [],
   )
 
   const handleAddRecipe = (newRecipe) => {
