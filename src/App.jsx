@@ -9,10 +9,14 @@ import AddRecipeForm from './components/AddRecipeForm.jsx'
 import RecipeList from './components/RecipeList.jsx'
 
 export const App = () => {
-  const [recipes, setRecipes] = useState([])
+  const [recipes, setRecipes] = useState(
+    () => loadFromLocalStorage('recipes') || []
+  )
 
   const handleAddRecipe = (newRecipe) => {
-    setRecipes([...recipes, newRecipe])
+    const updatedRecipes = [...recipes, newRecipe]
+    setRecipes(updatedRecipes)
+    saveToLocalStorage('recipes', updatedRecipes)
   }
 
   return (
