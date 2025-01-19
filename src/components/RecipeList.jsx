@@ -1,6 +1,6 @@
-import { RecipeCard } from './RecipeCard.jsx'
+import RecipeCard from './RecipeCard.jsx'
 
-export const RecipeList = ({ recipes }) => {
+const RecipeList = ({ recipes }) => {
   return (
     <div>
       {recipes.map((recipe, index) => (
@@ -9,3 +9,5 @@ export const RecipeList = ({ recipes }) => {
     </div>
   )
 }
+
+export default RecipeList
