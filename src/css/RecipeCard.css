@@ -47,3 +47,18 @@
 .recipe-card-difficulty span {
   color: #ffffff;
 }
+
+.recipe-card-delete {
+  cursor: pointer;
+
+  margin-top: 1rem;
+  padding: .5rem;
+
+  width: 30%;
+
+  border: 2px solid #050505c0;
+  border-radius: 5px;
+
+  color: currentColor;
+  background: #050505c7;
+}
