@@ -13,6 +13,7 @@ const RecipeCard = ({ recipe }) => {
       <p className="recipe-card-difficulty">
         Difficulty: <span>{recipe.difficulty}</span>
       </p>
+      <button className="recipe-card-delete">Delete this recipe</button>
     </div>
   )
 }
