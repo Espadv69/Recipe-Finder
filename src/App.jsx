@@ -21,11 +21,19 @@ export const App = () => {
     saveToLocalStorage('recipes', updatedRecipes)
   }
 
+  const handleDeleteRecipe = (recipeToDelete) => {
+    const updatedRecipes = recipes.filter(
+      (recipe) => recipe.name !== recipeToDelete.name,
+    )
+    setRecipes(updatedRecipes)
+    saveToLocalStorage('recipes', updatedRecipes)
+  }
+
   return (
     <div>
       <h1 className="h1-title">Recipe Finder</h1>
       <AddRecipeForm onAddRecipe={handleAddRecipe} />
-      <RecipeList recipes={recipes} />
+      <RecipeList recipes={recipes} onDeleteRecipe={handleDeleteRecipe} />
     </div>
   )
 }
