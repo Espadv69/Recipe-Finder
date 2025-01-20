@@ -1,6 +1,10 @@
 import '../css/RecipeCard.css'
 
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe, onDeleteRecipe }) => {
+  const deleteRecipe = () => {
+    onDeleteRecipe(recipe)
+  }
+
   return (
     <div className="recipe-card-container">
       <h3 className="recipe-card-name">{recipe.name}</h3>
@@ -13,7 +17,9 @@ const RecipeCard = ({ recipe }) => {
       <p className="recipe-card-difficulty">
         Difficulty: <span>{recipe.difficulty}</span>
       </p>
-      <button className="recipe-card-delete">Delete this recipe</button>
+      <button className="recipe-card-delete" onClick={deleteRecipe}>
+        Delete this recipe
+      </button>
     </div>
   )
 }
