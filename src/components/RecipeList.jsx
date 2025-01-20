@@ -1,6 +1,6 @@
 import RecipeCard from './RecipeCard.jsx'
 
-const RecipeList = ({ recipes }) => {
+const RecipeList = ({ recipes, onDeleteRecipe }) => {
   if (!recipes || recipes.length === 0) {
     return <p style={{ textAlign: 'center' }}>No recipes found!</p> // Mensaje para cuando no hay recetas
   }
@@ -8,7 +8,11 @@ const RecipeList = ({ recipes }) => {
   return (
     <div>
       {recipes.map((recipe, index) => (
-        <RecipeCard key={index} recipe={recipe} />
+        <RecipeCard
+          key={index}
+          recipe={recipe}
+          onDeleteRecipe={onDeleteRecipe}
+        />
       ))}
     </div>
   )
